@@ -8,6 +8,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/docker/docker/pkg/term"
 	"github.com/spf13/cobra"
 )
 
@@ -29,7 +30,7 @@ Run ad-hoc commands`,
 }
 
 func executeRoot(cmd *cobra.Command, args []string) error {
-	fmt.Printf(figletStr)
+	printFiglet()
 	cmd.Help()
 
 	return nil
@@ -37,4 +38,6 @@ func executeRoot(cmd *cobra.Command, args []string) error {
 
 func init() {
 
+	// Setup terminal std
+	term.StdStreams()
 }

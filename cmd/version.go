@@ -46,6 +46,11 @@ func runVersion(cmd *cobra.Command, args []string) {
 	}
 }
 
+func printFiglet() {
+	figletColoured := aec.GreenF.Apply(figletStr)
+	fmt.Printf(figletColoured)
+}
+
 const figletStr = `
      _             ____  
     | | __ _  __ _/ ___| 

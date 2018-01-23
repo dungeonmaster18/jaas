@@ -2,6 +2,15 @@
 
 
 [[projects]]
+  branch = "master"
+  name = "github.com/Azure/go-ansiterm"
+  packages = [
+    ".",
+    "winterm"
+  ]
+  revision = "d6e3b3328b783f23731bc4d058875b0371ff8109"
+
+[[projects]]
   name = "github.com/Microsoft/go-winio"
   packages = ["."]
   revision = "036d9d86531a3aff6be42ea59541cf44310d94ab"
@@ -38,6 +47,8 @@
     "pkg/longpath",
     "pkg/mount",
     "pkg/system",
+    "pkg/term",
+    "pkg/term/windows",
     "pkg/tlsconfig"
   ]
   revision = "7e59fbe50eaa5fd952f7a05aa827e2dc738c3794"
@@ -142,6 +153,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "af66a29d0944787b9ad5282b883067f3142b0eed895725b60e7fcb1d30fe1f29"
+  inputs-digest = "7448e696c8573e4b2e48865db5f610b9eb7f884fada642c2d40816c12af6a89d"
   solver-name = "gps-cdcl"
   solver-version = 1
